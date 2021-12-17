@@ -1,0 +1,22 @@
+﻿@model MvcMovie.Models.MovieDisplayViewModel
+
+@{ 
+    ViewBag.Title = "Film / Consulter"; 
+}
+
+<form class="form-horizontal">
+
+    <fieldset>
+
+        <legend>@ViewBag.Title</legend>
+
+        @await Html.PartialAsync("_Display.cshtml", Model)
+
+        <hr>
+        <div class="form-group">
+            <a asp-action="Edit" asp-route-id="@Model.Movie_ID" class="btn btn-secondary">Modifier</a>
+            <a asp-action="Index">Annuler</a>
+        </div>
+
+    </fieldset>
+</form>

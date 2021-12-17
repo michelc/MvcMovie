@@ -1,0 +1,29 @@
+﻿@model MvcMovie.Models.GenreViewModel
+
+@{ 
+    ViewBag.Title = "Genre / Supprimer"; 
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.AlertDanger))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.AlertDanger
+    </div>
+}
+
+<form method="post" class="form-horizontal">
+
+    <fieldset>
+
+        <legend>@ViewBag.Title</legend>
+
+        @await Html.PartialAsync("_Display.cshtml", Model)
+
+        <hr>
+        <div class="form-group">
+            <input type="submit" value="Supprimer" class="btn btn-danger" />
+            <a asp-action="Index">Annuler</a>
+        </div>
+
+    </fieldset>
+</form>
