@@ -16,7 +16,6 @@ Quelques idées de trucs à voir :
 * Ajouter MiniProfiler pour vérifier les requêtes générées
 * Utiliser AutoMapper pour les ViewModel
 * Compléter le modèle de données pour aborder plus de cas (EF Core et interface utilisateur)
-* Avoir des URLs en minuscule
 * Faire un TRIM des données lors des POST
 * etc...
 

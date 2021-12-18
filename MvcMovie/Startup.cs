@@ -25,6 +25,12 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
 
+            services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+                options.AppendTrailingSlash = true;
+            });
+
             services.AddDbContext<MvcMovieContext>(options =>
                         options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
         }
