@@ -39,6 +39,15 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
+            model.Movies = await (from x in _context.Movies
+                                  where x.Directors.Any(d => d.Director_ID == id)
+                                  orderby x.Title
+                                  select new IdCaption
+                                  {
+                                      ID = x.Movie_ID,
+                                      Caption = x.Title
+                                  }).ToListAsync();
+
             return View(model);
         }
 

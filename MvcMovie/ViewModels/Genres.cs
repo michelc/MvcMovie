@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcMovie.Models
 {
@@ -9,6 +10,8 @@ namespace MvcMovie.Models
         [Display(Name = "Titre")]
         [Required, StringLength(30, MinimumLength = 3)]
         public string Title { get; set; }
+
+        public List<IdCaption> Movies { get; set; }
 
         public Genre ToGenre()
         {

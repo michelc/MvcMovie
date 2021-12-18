@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MvcMovie.Models.IdCaption>
+
+<h5>Films</h5>
+
+<div class="list-group">
+    @foreach (var film in Model)
+    {
+    <div class="list-group-item clearfix">
+        @film.Caption
+        <span class="float-right">
+            <a asp-controller="Movies" asp-action="Details" asp-route-id="@film.ID">Consulter</a>
+        </span>
+    </div>}
+</div>
