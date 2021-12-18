@@ -169,6 +169,18 @@ namespace MvcMovie.Controllers
                                    Rating = x.Rating
                                }).FirstOrDefaultAsync();
 
+            if (model != null)
+            {
+                model.Director = await (from x in _context.Directors
+                                        where x.Movies.Any(d => d.Movie_ID == id)
+                                        orderby x.Name
+                                        select new IdCaption
+                                        {
+                                            ID = x.Director_ID,
+                                            Caption = x.Name
+                                        }).FirstOrDefaultAsync();
+            }
+
             return model;
         }
 

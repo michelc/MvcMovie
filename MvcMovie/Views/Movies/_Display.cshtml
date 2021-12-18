@@ -10,6 +10,13 @@
 </div>
 
 <div class="form-group row">
+    <label asp-for="Director" class="col-sm-3 col-form-label"></label>
+    <div class="col-sm-9">
+        <input asp-for="Director.Caption" class="form-control" readonly />
+    </div>
+</div>
+
+<div class="form-group row">
     <label asp-for="ReleaseDate" class="col-sm-3 col-form-label"></label>
     <div class="col-sm-9">
         <input asp-for="ReleaseDate" class="form-control" readonly />

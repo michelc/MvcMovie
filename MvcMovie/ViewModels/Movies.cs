@@ -39,6 +39,9 @@ namespace MvcMovie.Models
 
         [Display(Name = "Classement")]
         public RatingEnum Rating { get; set; }
+
+        [Display(Name = "Réalisateur")]
+        public IdCaption Director { get; set; }
     }
 
     public class MovieEditorViewModel
