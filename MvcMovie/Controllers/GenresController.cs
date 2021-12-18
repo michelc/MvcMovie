@@ -160,7 +160,6 @@ namespace MvcMovie.Controllers
 
             var model = await (from x in _context.Genres
                                where x.Genre_ID == id
-                               orderby x.Title
                                select new GenreViewModel
                                {
                                    Genre_ID = x.Genre_ID,

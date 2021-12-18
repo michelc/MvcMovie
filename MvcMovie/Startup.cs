@@ -33,6 +33,8 @@ namespace MvcMovie
 
             services.AddDbContext<MvcMovieContext>(options =>
                         options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
+
+            services.AddMiniProfiler().AddEntityFramework();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +77,8 @@ namespace MvcMovie
                 SupportedUICultures = new List<CultureInfo> { defaultCulture }
             };
             app.UseRequestLocalization(localizationOptions);
+
+            app.UseMiniProfiler();
 
             app.UseEndpoints(endpoints =>
             {

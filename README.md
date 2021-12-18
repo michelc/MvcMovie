@@ -1,7 +1,7 @@
 # Application MVC avec ASP.NET Core 5
 
 
-Le but de cette application est de servir à répertorier et docuenter différentes techniques pour
+Le but de cette application est de servir à répertorier et documenter différentes techniques pour
 continuer à développer des applications MVC.
 
 
@@ -13,7 +13,6 @@ Quelques idées de trucs à voir :
 * Se passer de jQuery ?
 * Essayer [Tom Select](https://tom-select.js.org/)
 * Tester [HTMX](https://htmx.org/) ou [Unpoly](https://unpoly.com/)
-* Ajouter MiniProfiler pour vérifier les requêtes générées
 * Utiliser AutoMapper pour les ViewModel
 * Compléter le modèle de données pour aborder plus de cas (EF Core et interface utilisateur)
 * Faire un TRIM des données lors des POST

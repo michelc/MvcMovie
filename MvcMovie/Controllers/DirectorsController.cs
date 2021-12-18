@@ -160,7 +160,6 @@ namespace MvcMovie.Controllers
 
             var model = await (from x in _context.Directors
                                where x.Director_ID == id
-                               orderby x.Name
                                select new DirectorViewModel
                                {
                                    Director_ID = x.Director_ID,
