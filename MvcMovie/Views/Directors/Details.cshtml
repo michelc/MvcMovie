@@ -10,11 +10,7 @@
 
         @await Html.PartialAsync("_Display.cshtml", Model)
 
-        <hr>
-        <div class="form-group">
-            <a asp-action="Edit" asp-route-id="@Model.Director_ID" class="btn btn-secondary">Modifier</a>
-            <a asp-action="Index">Annuler</a>
-        </div>
+        @await Html.PartialAsync("_LinktoEdit", Model.Director_ID)
 
     </fieldset>
 </form>
