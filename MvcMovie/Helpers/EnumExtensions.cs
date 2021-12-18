@@ -17,7 +17,7 @@ namespace MvcMovie.Helpers
 
             if (string.IsNullOrEmpty(displayName))
             {
-                displayName = enumValue.ToString();
+                displayName = enumValue.ToString().Replace("_", " ");
             }
 
             return displayName;

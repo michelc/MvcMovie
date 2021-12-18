@@ -16,7 +16,6 @@ namespace MvcMovie.Controllers
             _context = context;
         }
 
-
         // GET: Genres
         public async Task<IActionResult> Index()
         {
@@ -30,7 +29,6 @@ namespace MvcMovie.Controllers
 
             return View(model);
         }
-
 
         // GET: Genres/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -51,8 +49,6 @@ namespace MvcMovie.Controllers
         }
 
         // POST: Genres/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(GenreViewModel model)
@@ -81,8 +77,6 @@ namespace MvcMovie.Controllers
         }
 
         // POST: Genres/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, GenreViewModel model)

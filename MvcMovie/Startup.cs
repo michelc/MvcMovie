@@ -77,14 +77,5 @@ namespace MvcMovie
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
-
-
-        //https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/applying?tabs=dotnet-core-cli#apply-migrations-at-runtime
-        private static void ApplyMigrationsAtRuntime(IApplicationBuilder app)
-        {
-            //using var scope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
-
-            //scope.ServiceProvider.GetRequiredService<MvcMovieContext>().Database.Migrate();
-        }
     }
 }

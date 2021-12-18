@@ -74,8 +74,6 @@ namespace MvcMovie.Models
                         }
                 };
                 context.Movies.AddRange(movies);
-
-                // Persistance des données dans la base de données
                 context.SaveChanges();
             }
         }

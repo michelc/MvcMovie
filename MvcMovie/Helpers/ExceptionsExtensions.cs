@@ -10,7 +10,7 @@ namespace MvcMovie.Helpers
 
             if (message.Contains("FOREIGN KEY"))
             {
-                message = "Opération impossible car il existe des données rattachées à cette fiche.";
+                message = "Opération impossible car il existe des données liées à cette fiche.";
             }
 
             return message;

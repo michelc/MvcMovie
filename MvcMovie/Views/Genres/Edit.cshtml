@@ -1,8 +1,8 @@
 ﻿@model MvcMovie.Models.GenreViewModel
 
-@{ 
-    ViewBag.Title = "Genre / Modifier";
-}
+@{ ViewBag.Title = "Genre / Modifier"; }
+
+@await Html.PartialAsync("_Alert", Model)
 
 <form method="post" class="form-horizontal">
 

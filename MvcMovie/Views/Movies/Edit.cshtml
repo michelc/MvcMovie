@@ -1,15 +1,8 @@
 ﻿@model MvcMovie.Models.MovieEditorViewModel
 
-@{ 
-    ViewBag.Title = "Film / Modifier";
-}
+@{ ViewBag.Title = "Film / Modifier"; }
 
-@if (!string.IsNullOrEmpty(ViewBag.AlertDanger))
-{
-    <div class="alert alert-danger" role="alert">
-        @ViewBag.AlertDanger
-    </div>
-}
+@await Html.PartialAsync("_Alert", Model)
 
 <form method="post" class="form-horizontal">
 

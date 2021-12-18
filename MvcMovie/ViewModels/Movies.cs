@@ -9,7 +9,6 @@ namespace MvcMovie.Models
     {
         public int Movie_ID { get; set; }
 
-
         [Display(Name = "Titre")]
         public string Title { get; set; }
 
@@ -25,7 +24,6 @@ namespace MvcMovie.Models
     public class MovieDisplayViewModel
     {
         public int Movie_ID { get; set; }
-
 
         [Display(Name = "Titre")]
         public string Title { get; set; }
