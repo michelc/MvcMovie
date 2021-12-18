@@ -45,7 +45,9 @@ namespace MvcMovie.Controllers
         // GET: Genres/Create
         public IActionResult Create()
         {
-            return View();
+            var model = new GenreViewModel(); // pour que input.hidden contienne 0
+
+            return View(model);
         }
 
         // POST: Genres/Create

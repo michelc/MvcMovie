@@ -45,7 +45,9 @@ namespace MvcMovie.Controllers
         // GET: Directors/Create
         public IActionResult Create()
         {
-            return View();
+            var model = new DirectorViewModel(); // pour que input.hidden contienne 0
+
+            return View(model);
         }
 
         // POST: Directors/Create
