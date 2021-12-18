@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,6 +24,8 @@ namespace MvcMovie.Models
 
         [Required]
         public RatingEnum Rating { get; set; }
+
+        public ICollection<Director> Directors { get; set; }
     }
 
     public enum RatingEnum

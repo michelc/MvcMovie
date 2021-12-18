@@ -1,0 +1,11 @@
+﻿@model MvcMovie.Models.DirectorViewModel
+
+<input type="hidden" asp-for="Director_ID" />
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" autofocus />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+

@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MvcMovie.Models
 {
-    public class Genre
+    public class Director
     {
         [Key]
-        public int Genre_ID { get; set; }
+        public int Director_ID { get; set; }
 
-        [Required, StringLength(30)]
-        public string Title { get; set; }
+        [Required, StringLength(60)]
+        public string Name { get; set; }
 
         public ICollection<Movie> Movies { get; set; }
     }

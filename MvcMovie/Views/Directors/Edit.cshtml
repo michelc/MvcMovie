@@ -1,0 +1,27 @@
+﻿@model MvcMovie.Models.DirectorViewModel
+
+@{ ViewBag.Title = "Réalisateur / Modifier"; }
+
+@await Html.PartialAsync("_Alert", Model)
+
+<form method="post" class="form-horizontal">
+
+    <fieldset>
+
+        <legend>@ViewBag.Title</legend>
+
+        @await Html.PartialAsync("_Editor.cshtml", Model)
+
+        <hr>
+        <div class="form-group">
+            <input type="submit" value="Modifier" class="btn btn-primary" />
+            <a asp-action="Index">Annuler</a>
+        </div>
+
+    </fieldset>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

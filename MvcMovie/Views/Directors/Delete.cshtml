@@ -1,0 +1,22 @@
+﻿@model MvcMovie.Models.DirectorViewModel
+
+@{ ViewBag.Title = "Réalisateur / Supprimer"; }
+
+@await Html.PartialAsync("_Alert", Model)
+
+<form method="post" class="form-horizontal">
+
+    <fieldset>
+
+        <legend>@ViewBag.Title</legend>
+
+        @await Html.PartialAsync("_Display.cshtml", Model)
+
+        <hr>
+        <div class="form-group">
+            <input type="submit" value="Supprimer" class="btn btn-danger" />
+            <a asp-action="Index">Annuler</a>
+        </div>
+
+    </fieldset>
+</form>
