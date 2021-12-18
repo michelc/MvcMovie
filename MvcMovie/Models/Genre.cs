@@ -8,8 +8,7 @@ namespace MvcMovie.Models
         [Key]
         public int Genre_ID { get; set; }
 
-        [StringLength(30, MinimumLength = 3)]
-        [Required]
+        [Required, StringLength(30)]
         public string Title { get; set; }
 
         public List<Movie> Movies { get; set; }
